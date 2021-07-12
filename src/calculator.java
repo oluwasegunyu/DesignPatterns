@@ -13,8 +13,10 @@ public class calculator {
             System.out.println("请输入数字B:");
             double NumberB = in.nextDouble();
 
-            Operation oper = new Operation();
-            double result = oper.GetResult(NumberA, NumberB, operator);
+            Operation oper = OperationFactory.CreateOperation(operator);
+            oper.set_numberA(NumberA);
+            oper.set_numberB(NumberB);
+            double result = oper.GetResult();
 
             System.out.println("结果是：" + result);
         }catch(ArithmeticException ex){
