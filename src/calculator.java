@@ -13,24 +13,9 @@ public class calculator {
             System.out.println("请输入数字B:");
             double NumberB = in.nextDouble();
 
-            double result;
+            Operation oper = new Operation();
+            double result = oper.GetResult(NumberA, NumberB, operator);
 
-            switch (operator){
-                case "+":
-                    result = NumberA + NumberB;
-                    break;
-                case "-":
-                    result = NumberA - NumberB;
-                    break;
-                case "*":
-                    result = NumberA * NumberB;
-                    break;
-                case "/":
-                        result = NumberA / NumberB;
-                    break;
-                default:
-                    result = 0;
-            }
             System.out.println("结果是：" + result);
         }catch(ArithmeticException ex){
             System.out.println("您地输入有误： " + ex.getMessage());
