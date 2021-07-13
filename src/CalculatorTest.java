@@ -4,7 +4,6 @@ public class CalculatorTest {
 
         cal.setGoodPrice(2);
         cal.setGoodNum(2);
-        cal.count();
-        System.out.println("总价：" + cal.count());
+        System.out.println("总价：" + cal.count(0.8));
     }
 }

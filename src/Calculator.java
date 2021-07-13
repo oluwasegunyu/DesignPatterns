@@ -20,8 +20,8 @@ public class Calculator {
         this.goodNum = goodNum;
     }
 
-    public double count(){
-        total = getGoodPrice()*getGoodNum();
+    public double count(double discount){
+        total = getGoodPrice()*getGoodNum()*discount;
         return total;
     }
 }
