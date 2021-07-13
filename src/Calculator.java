@@ -1,4 +1,4 @@
-public class Calculator {
+public abstract class Calculator {
     private double total = 0.0d;
 
     private double goodPrice=0;
@@ -20,8 +20,5 @@ public class Calculator {
         this.goodNum = goodNum;
     }
 
-    public double count(double discount){
-        total = getGoodPrice()*getGoodNum()*discount;
-        return total;
-    }
+    public abstract double count();
 }

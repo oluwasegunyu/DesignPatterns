@@ -1,9 +1,18 @@
+import java.util.Scanner;
+
 public class CalculatorTest {
     public static void main(String[] args){
-        Calculator cal = new Calculator();
+        Scanner in = new Scanner(System.in);
 
-        cal.setGoodPrice(2);
-        cal.setGoodNum(2);
-        System.out.println("总价：" + cal.count(0.8));
+        System.out.print("价格：");
+        double price = in.nextDouble();
+
+        System.out.print("数量：");
+        double num = in.nextDouble();
+
+        Calculator cal = CalculatorFactory.CreateCalculator("满300返100");
+        cal.setGoodNum(num);
+        cal.setGoodPrice(price);
+        System.out.println("总计：" + cal.count());
     }
 }
