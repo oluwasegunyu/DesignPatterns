@@ -6,10 +6,10 @@ public class CalculatorReturn extends Calculator{
         this.moneyCondition = cashCondition;
         this.moneyReturn = cashReturn;
     }
-    public double count(){
-        double result = getGoodNum()*getGoodPrice();
-        if(getGoodNum()*getGoodPrice()>=moneyCondition)
-            result = getGoodNum()*getGoodPrice()-Math.floor(getGoodNum()*getGoodPrice()/moneyCondition)*moneyReturn;
+    public double count(double money){
+        double result = money;
+        if(money>=moneyCondition)
+            result = money-Math.floor(money/moneyCondition)*moneyReturn;
         return result;
     }
 }

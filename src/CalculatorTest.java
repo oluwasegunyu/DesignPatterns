@@ -10,9 +10,9 @@ public class CalculatorTest {
         System.out.print("数量：");
         double num = in.nextDouble();
 
-        Calculator cal = CalculatorFactory.CreateCalculator("满300返100");
-        cal.setGoodNum(num);
-        cal.setGoodPrice(price);
-        System.out.println("总计：" + cal.count());
+        String type = "满300返100";
+        CalculatorContext cal = new CalculatorContext(type);
+
+        System.out.println("总计：" + cal.getResult(price*num));
     }
 }

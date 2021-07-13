@@ -1,6 +1,7 @@
-public class CalculatorFactory {
-    public static Calculator CreateCalculator(String type){
-        Calculator cal = null;
+public class CalculatorContext {
+    private Calculator cal;
+
+    public CalculatorContext(String type){
         switch (type){
             case "正常收费":
                 cal = new CalculatorNormal();
@@ -9,6 +10,9 @@ public class CalculatorFactory {
                 cal = new CalculatorReturn(300,100);
                 break;
         }
-        return cal;
+    }
+
+    public double getResult(double money){
+        return cal.count(money);
     }
 }

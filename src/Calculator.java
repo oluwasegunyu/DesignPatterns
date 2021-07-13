@@ -20,5 +20,5 @@ public abstract class Calculator {
         this.goodNum = goodNum;
     }
 
-    public abstract double count();
+    public abstract double count(double money);
 }
