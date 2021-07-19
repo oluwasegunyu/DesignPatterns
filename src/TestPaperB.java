@@ -1,16 +1,16 @@
-public class TestPaperB extends TestPaper{
-    public void TestQuestion1(){
-        super.TestQuestion1();
-        System.out.println("答案： b");
+public class TestPaperB extends TestPaper {
+    @Override
+    protected String Answer1() {
+        return "b";
     }
 
-    public void TestQuestion2(){
-        super.TestQuestion2();
-        System.out.println("答案： b");
+    @Override
+    protected String Answer2() {
+        return "b";
     }
 
-    public void TestQuestion3(){
-        super.TestQuestion3();
-        System.out.println("答案： b");
+    @Override
+    protected String Answer3() {
+        return "b";
     }
 }
