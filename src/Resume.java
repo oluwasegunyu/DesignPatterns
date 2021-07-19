@@ -2,11 +2,15 @@ public class Resume implements Cloneable{
     private String name;
     private String sex;
     private String age;
-    private String timeArea;
-    private String company;
+    private WorkExperience work;
 
     public Resume(String name){
         this.name = name;
+        work = new WorkExperience();
+    }
+
+    public Resume(WorkExperience work) throws CloneNotSupportedException {
+        this.work = (WorkExperience) work.clone();
     }
 
     public void setPersonalInfo(String sex, String age){
@@ -15,16 +19,20 @@ public class Resume implements Cloneable{
     }
 
     public void setWorkExperience(String timeArea, String company){
-        this.timeArea = timeArea;
-        this.company = company;
+        work.setWorkDate(timeArea);
+        work.setCompany(company);
     }
 
     public void display(){
         System.out.println(name + " " + sex + " " + age);
-        System.out.println("工作经历 " + timeArea + company);
+        System.out.println("工作经历 " + work.getWorkDate() + work.getCompany());
     }
 
-    public Resume clone() throws CloneNotSupportedException {
-        return (Resume) super.clone();
+    public Object clone() throws CloneNotSupportedException {
+        Resume obj = new Resume(this.work);
+        obj.name = this.name;
+        obj.sex = this.sex;
+        obj.age = this.age;
+        return obj;
     }
 }
