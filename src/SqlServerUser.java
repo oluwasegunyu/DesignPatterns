@@ -1,4 +1,4 @@
-public class SqlServerUser {
+public class SqlServerUser implements IUser{
     public void insert(User user){
         System.out.println("在SQL Server中给User表增加一条记录");
     }

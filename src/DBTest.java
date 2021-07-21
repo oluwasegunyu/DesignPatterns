@@ -1,8 +1,9 @@
 public class DBTest {
     public static void main(String[] args){
         User user = new User();
-        SqlServerUser su = new SqlServerUser();
-        su.insert(user);
-        su.getUser(1);
+        IFactory factory = new SqlServerFactory();
+        IUser iu = factory.createUser();
+        iu.insert(user);
+        iu.getUser(1);
     }
 }
