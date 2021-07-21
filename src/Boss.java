@@ -1,7 +1,6 @@
 import java.util.ArrayList;
-import java.util.List;
 
-public class Secretary implements Subject{
+public class Boss implements Subject {
     private ArrayList<Observer> observers = new ArrayList<Observer>();
     private String action;
 
@@ -14,7 +13,7 @@ public class Secretary implements Subject{
     }
 
     public void Notify(){
-        for (Observer o: observers) {
+        for (Observer o:observers) {
             o.update();
         }
     }
