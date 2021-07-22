@@ -5,12 +5,11 @@ public class DBTest {
         User user = new User();
         Department dept = new Department();
 
-        IFactory factory = new AccessFactory();
-        IUser iu = factory.createUser();
+        IUser iu = DataAccess.createUser();
         iu.insert(user);
         iu.getUser(1);
 
-        IDepartment id = factory.createDepartment();
+        IDepartment id = DataAccess.createDepartment();
         id.insert(dept);
         id.getDepartment(1);
     }
