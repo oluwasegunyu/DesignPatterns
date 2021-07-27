@@ -7,12 +7,10 @@ public class BarbecuerTest {
         Waiter girl = new Waiter();
 
         girl.setOrder(bakeMuttonCommand1);
-        girl.notifyBoy();
-        girl.setOrder(bakeChickenCommand1);
-        girl.notifyBoy();
+        girl.setOrder(bakeMuttonCommand1);
         girl.setOrder(bakeMuttonCommand2);
-        girl.notifyBoy();
         girl.setOrder(bakeChickenCommand1);
+        girl.cancelOrder(bakeMuttonCommand1);
         girl.notifyBoy();
     }
 }

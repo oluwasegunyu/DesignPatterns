@@ -7,4 +7,9 @@ public class BakeMuttonCommand extends Command{
     public void excuteCommand(){
         receiver.bakeMutton();
     }
+
+    @Override
+    public String toString(){
+        return "BakeMuttonCommand";
+    }
 }

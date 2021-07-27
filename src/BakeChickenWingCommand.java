@@ -7,4 +7,9 @@ public class BakeChickenWingCommand extends Command{
     public void excuteCommand(){
         receiver.bakeChickenWing();
     }
+
+    @Override
+    public String toString(){
+        return "BakeChickenWingCommand";
+    }
 }
