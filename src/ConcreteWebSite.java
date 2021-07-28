@@ -6,7 +6,7 @@ public class ConcreteWebSite extends WebSite{
     }
 
     @Override
-    public void use(){
-        System.out.println("网站分类: " + name);
+    public void use(User user){
+        System.out.println("网站分类: " + name + " 用户: " + user.getName());
     }
 }
