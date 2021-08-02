@@ -1,3 +1,3 @@
 public abstract class Person {
-    public abstract void accept(Action visitor);
+    public abstract void accept(States visitor);
 }

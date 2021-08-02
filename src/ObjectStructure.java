@@ -12,9 +12,9 @@ public class ObjectStructure {
         elements.remove(element);
     }
 
-    public void display(Action visitor){
+    public void display(States state){
         for (Person e: elements) {
-            e.accept(visitor);
+            e.accept(state);
         }
     }
 }

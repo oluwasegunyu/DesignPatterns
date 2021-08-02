@@ -1,4 +1,4 @@
-public class Amativeness extends Action{
+public class Amativeness extends States {
     @Override
     public void getManConclusion(Man concreteElementA){
         System.out.println(concreteElementA.getClass().getName() + " " + this.getClass().getName()+ "时，背后多半有一个伟大的女人。");
