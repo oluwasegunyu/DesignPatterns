@@ -3,12 +3,9 @@ public class PersonDirector {
     public PersonDirector(PersonBuilder pb){
         this.pb = pb;
     }
-    public void createPerson(){
-        pb.buildHead();
-        pb.buildBody();
-        pb.buildArmLeft();
-        pb.buildArmRight();
-        pb.buildLegLeft();
-        pb.buildLegRight();
+    public Person dressPerson(){
+        pb.wearTrousers();
+        pb.wearTshirt();
+        return pb.makeupPerson();
     }
 }

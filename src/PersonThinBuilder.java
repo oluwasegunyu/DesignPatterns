@@ -1,26 +1,18 @@
 public class PersonThinBuilder extends PersonBuilder{
+
+    private Person thinPerson = new Person();
+
     @Override
-    public void buildHead(){
-        System.out.println("小头");
+    public void wearTshirt(){
+        thinPerson.setTshirt(new ThinTshirt());
     }
     @Override
-    public void buildBody(){
-        System.out.println("小身体");
+    public void wearTrousers(){
+        thinPerson.setTrousers(new ThinTrousers());
     }
+
     @Override
-    public void buildArmLeft(){
-        System.out.println("小左手");
-    }
-    @Override
-    public void buildArmRight(){
-        System.out.println("小右手");
-    }
-    @Override
-    public void buildLegRight(){
-        System.out.println("小右脚");
-    }
-    @Override
-    public void buildLegLeft(){
-        System.out.println("小左脚");
+    public Person makeupPerson(){
+        return thinPerson;
     }
 }

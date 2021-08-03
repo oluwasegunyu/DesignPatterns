@@ -1,26 +1,18 @@
 public class PersonFatBuilder extends PersonBuilder{
+
+    private Person fatPerson = new Person();
+
     @Override
-    public void buildHead(){
-        System.out.println("大头");
+    public void wearTshirt(){
+        fatPerson.setTshirt(new FatTshirt());
     }
     @Override
-    public void buildBody(){
-        System.out.println("大身体");
+    public void wearTrousers(){
+        fatPerson.setTrousers(new FatTrousers());
     }
+
     @Override
-    public void buildArmLeft(){
-        System.out.println("大左手");
-    }
-    @Override
-    public void buildArmRight(){
-        System.out.println("大右手");
-    }
-    @Override
-    public void buildLegRight(){
-        System.out.println("大右脚");
-    }
-    @Override
-    public void buildLegLeft(){
-        System.out.println("大左脚");
+    public Person makeupPerson(){
+        return fatPerson;
     }
 }
