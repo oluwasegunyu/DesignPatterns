@@ -1,3 +1,5 @@
+package normal;
+
 public abstract class Dock {
     public void quack(){
         System.out.println("guagua");

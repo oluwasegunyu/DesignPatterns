@@ -1,3 +1,5 @@
+package normal;
+
 public class MallardDuck extends Dock{
     @Override
     public void display(){
